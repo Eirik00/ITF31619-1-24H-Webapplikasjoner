@@ -1,0 +1,23 @@
+{
+  "name": "spa-ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+		"dev:frontend": "vite",
+		"dev:server": "tsx --watch server.ts",
+		"dev": "concurrently -n frontend,server -c green,blue \"npm run dev:frontend\" \"npm run dev:server\""
+	},
+	"dependencies": {
+		"@hono/node-server": "^1.12.0",
+		"hono": "^4.4.12",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@types/node": "^22.2.0",
+		"concurrently": "8.2.2",
+		"tsx": "^4.16.2",
+		"typescript": "^5.5.4",
+		"vite": "^5.4.0"
+	}
+}
